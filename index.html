@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 1 - (Resume Template) 27 Sep 2022</title>
+
+    <!-- Made By Tejinder Singh  -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        .container {
+            /* width:1100px; */
+            min-width: 1100px;
+            display: grid;
+            grid-template-columns: 380px auto;
+        }
+
+
+        /* left side css code  */
+        .container .left .profile {
+            background-color: #56c7e9;
+            padding: 55px;
+            text-align: center;
+            color: #3c403f;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .container .left .profile img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            display: block;
+            margin: auto;
+        }
+
+        .container .left .profile h1 {
+            margin: 30px 0 0 0;
+            font-size: 34px;
+
+        }
+
+        .container .left .profile p {
+            margin: 15px;
+
+        }
+
+        .container .left .details {
+            background-color: #3c403f;
+            color: white;
+            padding: 35px;
+        }
+
+        .container .left .details h2 {
+            padding: 0 0 8px 0;
+            border-bottom: 2px solid white;
+            text-transform: uppercase;
+            margin: 5px 0;
+        }
+
+        .container .left .details h2 i {
+            color: #56c7e9;
+            margin-right: 5px;
+        }
+
+        .container .contact .contact-details .content .left {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 6px 0;
+        }
+
+        .container .education .education-details .content .left {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 5px 0;
+        }
+
+        .container .contact .contact-details .content .left i {
+            font-size: 22px;
+        }
+
+        .contact-details,
+        .education-details,
+        .language-details {
+            margin: 35px 0;
+        }
+
+        .container .left .details p {
+            color: #979a99;
+            margin: 5px 0;
+            word-wrap: break-word;
+        }
+
+        .container .left .details .content h3 {
+            margin: 0 0 3px 0;
+        }
+
+        .container .left .details .content {
+            margin: 0 0 22px 0;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            column-gap: 30px;
+        }
+
+        .container .left .details .content ul {
+            margin: 0 22px;
+        }
+
+        .container .left .details .content ul li {
+            margin: 8px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        /* right side css code */
+        .container .main {
+            padding: 45px;
+        }
+
+        .container .main h2 {
+            padding: 0 0 10px 0;
+            border-bottom: 2px solid #353938;
+            text-transform: uppercase;
+            margin: 0 0 20px 0;
+            color: #353938;
+        }
+
+        .container .main h2 i {
+            color: #56c7e9;
+            margin-right: 5px;
+        }
+
+        .container .main .profile-info,
+        .container .main .work,
+        .container .main .skills,
+        .container .main .reference {
+            margin: 0 0 45px 0;
+        }
+
+        .container .main p {
+            color: #7e7e7e;
+            margin: 5px;
+            text-align: justify;
+        }
+
+        .container .main .work .content {
+            display: grid;
+            grid-template-columns: auto 4fr;
+            column-gap: 25px;
+            margin: 0 0 35px 0;
+        }
+
+        .container .main .work .content .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container .main .work .content h3 {
+            margin: 0 0 5px 0;
+            padding: 0 0 0 4px;
+            color: #353938;
+        }
+
+        .container .main .work .content .left {
+            display: flex;
+            justify-content: center;
+            padding-top: 5px;
+        }
+
+        .container .main .skills .content,
+        .container .main .reference .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 90px;
+        }
+
+        .container .main .skills .content p {
+            color: #7f7f7f;
+            margin: 10px 0;
+        }
+
+        .container .main .reference .content p {
+            margin: 8px 0;
+        }
+
+
+        /* progressbar */
+        .bar {
+            width: 100%;
+            height: 10px;
+            background-color: #d9d9d9;
+            margin: 0 0 8px 0;
+        }
+
+        .bar span {
+            display: block;
+            height: 10px;
+            background-color: #56c7e9;
+        }
+
+        .ninety {
+            width: 90%;
+        }
+
+        .seventy {
+            width: 70%;
+        }
+
+        .fifty {
+            width: 50%;
+        }
+
+        .container .left .details .content ul li .bar {
+            width: 130px;
+            margin: 0 0 0 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="profile">
+                <div>
+                    <img src="./LRM_EXPORT_20181024_170829.jpg" alt="" />
+                </div>
+                <h1>Tejinder Singh</h1>
+                <p>Student</p>
+            </div>
+
+            <div class="details">
+                <div class="contact">
+                    <h2><i class="fa-solid fa-user"></i> Contact</h2>
+
+                    <div class="contact-details">
+                        <div class="content">
+                            <div class="left"><i class="fa-solid fa-phone"></i></div>
+                            <div class="right">
+                                <h3>Phone</h3>
+                                <p>123-456-7890</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="left"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="right">
+                                <h3>Email</h3>
+                                <p>hello@reallygreatsite.com</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="left"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="right">
+                                <h3>Address</h3>
+                                <p>123 Anywhere St., Any Citey</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education">
+                    <h2><i class="fa-solid fa-book"></i> Education</h2>
+
+                    <div class="education-details">
+                        <div class="content">
+                            <div class="left"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                            <div class="right">
+                                <h3>2005 - 2009</h3>
+                                <h3>Bachelor of Design</h3>
+                                <p>Fauget University</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="left"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                            <div class="right">
+                                <h3>2005 - 2009</h3>
+                                <h3>Master of Design</h3>
+                                <p>Fauget University</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="language">
+                    <h2><i class="fa-solid fa-earth-americas"></i> Language</h2>
+
+                    <div class="language-details">
+                        <div class="content">
+                            <ul>
+                                <li>
+                                    <div class="left">
+                                        <p>English</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="bar">
+                                            <span class="ninety"></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left">
+                                        <p>Spanish</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="bar">
+                                            <span class="seventy"></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left">
+                                        <p>Indonesia</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="bar">
+                                            <span class="fifty"></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="profile-info">
+                <h2><i class="fa-solid fa-user"></i> Profile Info</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas error sed accusantium inventore
+                    similique quidem consequuntur, porro aliquid! Molestias corporis exercitationem praesentium id eaque
+                    sequi, ducimus, repudiandae impedit odit at autem a quidem cumque quos blanditiis rerum corrupti
+                    fugit rem voluptatum facilis animi sunt, laborum non quam! Facilis, maiores obcaecati?
+                </p>
+            </div>
+
+            <div class="work">
+                <h2><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
+                <div class="content">
+                    <div class="left"><i class="fa-solid fa-clock"></i></div>
+                    <div class="right">
+                        <div class="top">
+                            <h3>Junior Graphic Designer</h3>
+                            <h3>2012 - 2015</h3>
+                        </div>
+                        <div class="bottom">
+                            <h3>Brocelle Studios</h3>
+                            <p>Working as graphic designer for 1 year</p>
+                            <p>Post Graduated in Website & Graphics Designing.</p>
+                            <p>Academic Excellence in Web Design.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="left"><i class="fa-solid fa-clock"></i></div>
+                    <div class="right">
+                        <div class="top">
+                            <h3>Junior Graphic Designer</h3>
+                            <h3>2012 - 2015</h3>
+                        </div>
+                        <div class="bottom">
+                            <h3>Brocelle Studios</h3>
+                            <p>Working as graphic designer for 1 year</p>
+                            <p>Post Graduated in Website & Graphics Designing.</p>
+                            <p>Academic Excellence in Web Design.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="left"><i class="fa-solid fa-clock"></i></div>
+                    <div class="right">
+                        <div class="top">
+                            <h3>Junior Graphic Designer</h3>
+                            <h3>2012 - 2015</h3>
+                        </div>
+                        <div class="bottom">
+                            <h3>Brocelle Studios</h3>
+                            <p>Working as graphic designer for 1 year</p>
+                            <p>Post Graduated in Website & Graphics Designing.</p>
+                            <p>Academic Excellence in Web Design.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills">
+                <h2><i class="fa-solid fa-gear"></i> My Skills and Expertise</h2>
+
+                <div class="content">
+                    <div class="left">
+                        <div class="card">
+                            <p>Graphic Design</p>
+                            <div class="bar">
+                                <span class="ninety"></span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <p>Web Design</p>
+                            <div class="bar">
+                                <span class="seventy"></span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <p>Video Editing</p>
+                            <div class="bar">
+                                <span class="fifty"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right">
+                        <div class="card">
+                            <p>Branding</p>
+                            <div class="bar">
+                                <span class="ninety"></span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <p>Photography</p>
+                            <div class="bar">
+                                <span class="seventy"></span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <p>SEO & Marketing</p>
+                            <div class="bar">
+                                <span class="fifty"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reference">
+                <h2><i class="fa-solid fa-address-book"></i> My reference</h2>
+                <div class="content">
+                    <div>
+                        <h4>Harumi Kobayashi</h4>
+                        <p>Wardiere Inc. /CEO</p>
+                        <p>123-456-7890</p>
+                    </div>
+                    <div>
+                        <h4>Harumi Kobayashi</h4>
+                        <p>Wardiere Inc. /CEO</p>
+                        <p>123-456-7890</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/ceef2fc685.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
